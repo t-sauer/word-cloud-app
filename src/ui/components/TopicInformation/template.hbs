@@ -1,0 +1,13 @@
+<div>
+  {{#if @topic}}
+    Information on topic "{{@topic.label}}"
+    <br><br>
+    Total mentions: {{@topic.volume}}
+    <br><br>
+    <ul>
+      <li>Positive mentions: {{@topic.sentiment.positive}}</li>
+      <li>Neutral mentions: {{@topic.sentiment.neutral}}</li>
+      <li>Negative mentions: {{@topic.sentiment.positive}}</li>
+    </ul>
+  {{/if}}
+</div>
