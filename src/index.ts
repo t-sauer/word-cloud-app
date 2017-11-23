@@ -17,6 +17,6 @@ app.registerInitializer({
   }
 });
 
-app.renderComponent('WordCloudApp', containerElement, null);
+app.renderComponent('WordCloudApp', containerElement!, null);
 
 app.boot();

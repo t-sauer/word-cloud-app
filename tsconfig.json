@@ -6,6 +6,10 @@
     "inlineSources": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
     "types": [
       "qunit"
     ]
