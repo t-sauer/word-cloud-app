@@ -1,12 +1,12 @@
 import Component, { tracked } from '@glimmer/component';
 
-interface Topic {
+export interface Topic {
   burst: number;
-  days: any;
+  days: any[];
   id: string;
   label: string;
   pageType: any;
-  queries: any;
+  queries: any[];
   sentiment: any;
   sentimentScore: number;
   type: string;
@@ -15,7 +15,7 @@ interface Topic {
 
 export default class WordCloudApp extends Component {
 
-  @tracked private topics: Topic[];
+  @tracked private topics: Topic[] = [];
   @tracked private selectedTopic: Topic;
 
   constructor(options) {
