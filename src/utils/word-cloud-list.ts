@@ -1,6 +1,11 @@
 import { Topic } from '../ui/components/WordCloudApp/component';
 import WordCloudElement from './word-cloud-element';
 
+/**
+ * The WordCloudList creates a list of WordCloudElements from a list of topics.
+ * The list extracts maximum and minimum volume from the list of topics which are
+ * required to generate WordCloudElements.
+ */
 export default class WordCloudList {
   private topics: Topic[] = [];
 

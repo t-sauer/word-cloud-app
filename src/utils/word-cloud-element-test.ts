@@ -14,31 +14,31 @@ module('Util: WordCloudElement', function(hooks) {
     assert.equal(label, 'Berlin');
   });
 
-  test('it returns the correct color if sentiment is above 60', function(assert) {
+  test('it returns the correct sentimentLevel if sentiment is above 60', function(assert) {
     const topic = {
       label: 'Berlin',
       sentimentScore: 65
     };
     const element = new WordCloudElement(topic as Topic, { minVolume: 0, maxVolume: 65 });
-    assert.equal(element.color, 'green');
+    assert.equal(element.sentimentLevel, 'positive');
   });
 
-  test('it returns the correct color if sentiment is below 40', function(assert) {
+  test('it returns the correct sentimentLevel if sentiment is below 40', function(assert) {
     const topic = {
       label: 'Berlin',
       sentimentScore: 10
     };
     const element = new WordCloudElement(topic as Topic, { minVolume: 0, maxVolume: 65 });
-    assert.equal(element.color, 'red');
+    assert.equal(element.sentimentLevel, 'negative');
   });
 
-  test('it returns the correct color if sentiment is between 40 and 60', function(assert) {
+  test('it returns the correct sentimentLevel if sentiment is between 40 and 60', function(assert) {
     const topic = {
       label: 'Berlin',
       sentimentScore: 50
     };
     const element = new WordCloudElement(topic as Topic, { minVolume: 0, maxVolume: 65 });
-    assert.equal(element.color, 'gray');
+    assert.equal(element.sentimentLevel, 'neutral');
   });
 
   test('it returns the biggest size if the volume is the maximum', function(assert) {

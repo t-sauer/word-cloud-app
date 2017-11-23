@@ -49,7 +49,16 @@ export default class WordCloud extends Component {
 
     WordCloud2(element, {
       click: this.wordClicked,
-      color: (wordElement: WordCloudElement) => wordElement.color,
+      color: (wordElement: WordCloudElement) => {
+        switch (wordElement.sentimentLevel) {
+          case 'positive':
+            return 'green';
+          case 'negative':
+            return 'red';
+          case 'neutral':
+            return 'gray';
+        }
+      },
       list,
       maxRotation: 0,
       minRotation: 0,
