@@ -1,3 +1,4 @@
+// tslint:disable:ordered-imports
 import 'babel-polyfill/browser';
 import 'whatwg-fetch';
 import { ComponentManager, setPropertyDidChange } from '@glimmer/component';

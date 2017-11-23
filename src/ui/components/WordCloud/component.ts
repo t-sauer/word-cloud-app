@@ -1,5 +1,7 @@
 import Component from '@glimmer/component';
 import WordCloud2 from 'wordcloud';
+import WordCloudElement from '../../../utils/word-cloud-element';
+import WordCloudList from '../../../utils/word-cloud-list';
 import { Topic } from '../WordCloudApp/component';
 
 export default class WordCloud extends Component {
@@ -19,8 +21,8 @@ export default class WordCloud extends Component {
     this.renderCloud();
   }
 
-  private wordClicked = ([word, size, topic]) => {
-    this.args.ontopicselect(topic);
+  private wordClicked = ([word]: [WordCloudElement]) => {
+    this.args.ontopicselect(word.topic);
   }
 
   /**
@@ -37,16 +39,21 @@ export default class WordCloud extends Component {
       return;
     }
 
+    const wordList = new WordCloudList(this.args.topics);
+
     const { element } = this;
-    const list = this.args.topics.map((topic) => {
-      return [topic.label, topic.volume, topic];
+
+    const list = wordList.elements.map((wordElement) => {
+      return [wordElement, wordElement.size * 30];
     });
 
     WordCloud2(element, {
       click: this.wordClicked,
+      color: (wordElement: WordCloudElement) => wordElement.color,
       list,
       maxRotation: 0,
-      minRotation: 0
+      minRotation: 0,
+      shuffle: false
     });
 
     this.lastRenderedTopics = this.args.topics;
