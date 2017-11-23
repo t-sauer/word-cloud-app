@@ -8,6 +8,6 @@ module('Component: WordCloud', function(hooks) {
 
   test('it renders', async function(assert) {
     await this.render(hbs`<WordCloud/>`);
-    assert.equal(this.containerElement.textContent, 'foo');
+    assert.equal(this.containerElement.textContent, '');
   });
 });

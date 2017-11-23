@@ -8,6 +8,6 @@ module('Component: WordCloudApp', function(hooks) {
 
   test('it renders', async function(assert) {
     await this.render(hbs`<WordCloudApp />`);
-    assert.equal(this.containerElement.textContent, 'Welcome to Glimmer!\n');
+    assert.equal(this.containerElement.textContent.trim(), 'Word Cloud');
   });
 });
