@@ -1,13 +1,22 @@
-<div>
-  {{#if @topic}}
-    Information on topic "{{@topic.label}}"
-    <br><br>
-    Total mentions: {{@topic.volume}}
-    <br><br>
-    <ul>
-      <li>Positive mentions: {{@topic.sentiment.positive}}</li>
-      <li>Neutral mentions: {{@topic.sentiment.neutral}}</li>
-      <li>Negative mentions: {{@topic.sentiment.positive}}</li>
-    </ul>
-  {{/if}}
+<div class="topic-information {{if @topicInformationVisible "topic-information--visible"}}">
+  <div class="topic-content">
+    {{#if @topic}}
+      <h2 class="topic-information__title">Information on topic "{{@topic.label}}"</h2>
+      Total mentions: {{@topic.volume}}
+      <ul class="topic-information__mentions-statistic">
+        <li>
+          Positive mentions:
+          <span class="topic-information__sentiment--positive">{{sentiments.positive}}</span>
+        </li>
+        <li>
+          Neutral mentions:
+          <span class="topic-information__sentiment--neutral">{{sentiments.neutral}}</span>
+        </li>
+        <li>
+          Negative mentions:
+          <span class="topic-information__sentiment--negative">{{sentiments.negative}}</span>
+        </li>
+      </ul>
+    {{/if}}
+  </div>
 </div>

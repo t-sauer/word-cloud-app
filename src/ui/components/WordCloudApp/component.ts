@@ -7,7 +7,11 @@ export interface Topic {
   label: string;
   pageType: any;
   queries: any[];
-  sentiment: any;
+  sentiment: {
+    positive?: number;
+    negative?: number;
+    neutral?: number;
+  };
   sentimentScore: number;
   type: string;
   volume: number;
@@ -16,7 +20,8 @@ export interface Topic {
 export default class WordCloudApp extends Component {
 
   @tracked private topics: Topic[] = [];
-  @tracked private selectedTopic: Topic;
+  @tracked private selectedTopic: Topic | null;
+  @tracked private topicInformationVisible: boolean = false;
 
   constructor(options) {
     super(options);
@@ -32,6 +37,11 @@ export default class WordCloudApp extends Component {
   }
 
   private selectTopic(topic: Topic) {
-    this.selectedTopic = topic;
+    if (topic === this.selectedTopic && this.topicInformationVisible) {
+      this.topicInformationVisible = false;
+    } else {
+      this.topicInformationVisible = true;
+      this.selectedTopic = topic;
+    }
   }
 }

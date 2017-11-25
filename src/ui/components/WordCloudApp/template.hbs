@@ -1,4 +1,14 @@
-<h1>Word Cloud</h1>
+<div class="word-cloud-app">
+  <h1 class="word-cloud-app__title">Word Cloud</h1>
 
-<WordCloud @topics={{topics}} @ontopicselect={{action selectTopic}}></WordCloud>
-<TopicInformation @topic={{selectedTopic}}></TopicInformation>
+  <div class="word-cloud-app__content">
+    <WordCloud
+      @topics={{topics}}
+      @ontopicselect={{action selectTopic}}
+    ></WordCloud>
+    <TopicInformation
+      @topic={{selectedTopic}}
+      @topicInformationVisible={{topicInformationVisible}}
+    ></TopicInformation>
+  </div>
+</div>
