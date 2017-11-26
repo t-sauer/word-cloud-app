@@ -14,7 +14,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:t-sauer/word-cloud-app.git`
 * `cd word-cloud-app`
 * `yarn`
 
@@ -27,6 +27,11 @@ You will need the following things properly installed on your computer.
 
 * `ember build` (development)
 * `ember build --environment production` (production)
+
+### Deployment
+
+`ember build production` will build and deploy the application to the `gh-pages` branch of the repos `origin` remote via [ember-cli-deploy-git](https://github.com/ef4/ember-cli-deploy-git).
+
 
 ## Further Reading / Useful Links
 
