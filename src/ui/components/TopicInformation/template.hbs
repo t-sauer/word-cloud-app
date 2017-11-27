@@ -1,7 +1,11 @@
 <div class="topic-information {{if @topicInformationVisible "topic-information--visible"}}">
   <div class="topic-content">
     {{#if @topic}}
-      <h2 class="topic-information__title">Information on topic "{{@topic.label}}"</h2>
+      <h2 class="topic-information__title">
+        Information on topic:
+        <br>
+        "{{@topic.label}}"
+      </h2>
       Total mentions: {{@topic.volume}}
       <ul class="topic-information__mentions-statistic">
         <li>

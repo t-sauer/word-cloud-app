@@ -1,18 +1,24 @@
 .topic-information {
-  flex: 0 0 300px;
-  padding: 0 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  z-index: 10;
+
+  padding: 20px;
+  width: 350px;
+
   background-color: white;
   color: #444;
-  border-radius: 0 3px 3px 0;
-  box-shadow: none;
-  transform: translateX(-100%);
   opacity: 0;
+  box-shadow: -5px 0px 5px 0 rgba(0, 0, 0, 0.16);
+
   transition: opacity 300ms ease-out, transform 300ms ease-out, box-shadow 300ms ease-out;
 
   &--visible {
     transform: translateX(0);
     opacity: 1;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
   }
 
   &__title {
@@ -22,9 +28,11 @@
 
   &__mentions-statistic {
     padding-left: 20px;
+    line-height: 1.5;
   }
 
   &__sentiment {
+
     &--positive {
       color: #cddc39;
     }

@@ -1,11 +1,6 @@
 .word-cloud {
-  flex: 0 0 1000px;
-  margin-right: 1px;
-  background-color: white;
-  border-radius: 3px 0 0 3px;
   user-select: none;
   z-index: 1;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
 
   &__cloud {
     height: 340px;
