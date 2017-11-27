@@ -30,7 +30,7 @@ You will need the following things properly installed on your computer.
 
 ### Deployment
 
-`ember build production` will build and deploy the application to the `gh-pages` branch of the repos `origin` remote via [ember-cli-deploy-git](https://github.com/ef4/ember-cli-deploy-git).
+`ember deploy production` will build and deploy the application to the `gh-pages` branch of the repos `origin` remote via [ember-cli-deploy-git](https://github.com/ef4/ember-cli-deploy-git).
 
 
 ## Further Reading / Useful Links
