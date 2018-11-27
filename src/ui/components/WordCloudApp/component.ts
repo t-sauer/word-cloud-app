@@ -30,7 +30,7 @@ export default class WordCloudApp extends Component {
   }
 
   private async loadTopics() {
-    const request = await fetch('./topics.json');
+    const request = await fetch('/topics.json');
     const data = await request.json();
 
     this.topics = data.topics;

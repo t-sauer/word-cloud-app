@@ -16,10 +16,10 @@
     debug "^3.1.0"
     walk-sync "^0.3.2"
 
-"@glimmer/application-pipeline@^0.11.0":
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/@glimmer/application-pipeline/-/application-pipeline-0.11.2.tgz#525cd775b5e040bce14525f9ecb072f8f89625b8"
-  integrity sha512-WaC7zubp9CU1/6E9Zjf0r0uN/Fk9SwpAJam8iWCx5bUd+jmbZtEh69s5bYtGvRTD6018+nduz2r4NOX5PmhNPQ==
+"@glimmer/application-pipeline@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@glimmer/application-pipeline/-/application-pipeline-0.14.0.tgz#146d152d1403162156d326fcfa14de93155dafe7"
+  integrity sha512-r6+xvI/ewaJreBCDWY40GAqih1U/Tr6tmQUoVldiUzZPs4HXnMaoOn+JcCyYu1A+5R6Ic1U78A5g1q8+iT+wHw==
   dependencies:
     "@glimmer/app-compiler" "^0.9.0"
     "@glimmer/resolution-map-builder" "^0.5.1"
@@ -388,10 +388,10 @@
     handlebars "^4.0.6"
     simple-html-tokenizer "^0.5.3"
 
-"@glimmer/test-helpers@^0.30.3":
-  version "0.30.3"
-  resolved "https://registry.yarnpkg.com/@glimmer/test-helpers/-/test-helpers-0.30.3.tgz#57bd84fba9aa498de025f8d0b4c3f0ab2e9afa97"
-  integrity sha512-l/jlzWpxczTIuFHZjG1ZiFB52f97BiuKk9DRTIfcnELv7OQJDzocBZA6/hmzgUmSA8On7DJTG2qLEJn4OkSW1w==
+"@glimmer/test-helpers@^0.31.2":
+  version "0.31.2"
+  resolved "https://registry.yarnpkg.com/@glimmer/test-helpers/-/test-helpers-0.31.2.tgz#3614cca5e1714ce08c41175ba2505e3329dca732"
+  integrity sha512-Ft36aWOkpW84YgIlf8hNySKJaQALPCySJwNY6g2CgU07sxahnxt4HCSZSi6wrJo+JMR0cXGU4Q8yU8GyNpLnBA==
 
 "@glimmer/util@^0.31.0":
   version "0.31.0"
