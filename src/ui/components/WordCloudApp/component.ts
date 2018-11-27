@@ -20,7 +20,7 @@ export interface Topic {
 export default class WordCloudApp extends Component {
 
   @tracked private topics: Topic[] = [];
-  @tracked private selectedTopic: Topic | null;
+  @tracked private selectedTopic: Topic | null = null;
   @tracked private topicInformationVisible: boolean = false;
 
   constructor(options) {

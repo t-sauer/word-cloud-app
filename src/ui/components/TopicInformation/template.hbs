@@ -10,15 +10,15 @@
       <ul class="topic-information__mentions-statistic">
         <li>
           Positive mentions:
-          <span class="topic-information__sentiment--positive">{{sentiments.positive}}</span>
+          <span class="topic-information__sentiment--positive">{{@topic.sentiment.positive}}</span>
         </li>
         <li>
           Neutral mentions:
-          <span class="topic-information__sentiment--neutral">{{sentiments.neutral}}</span>
+          <span class="topic-information__sentiment--neutral">{{@topic.sentiment.neutral}}</span>
         </li>
         <li>
           Negative mentions:
-          <span class="topic-information__sentiment--negative">{{sentiments.negative}}</span>
+          <span class="topic-information__sentiment--negative">{{@topic.sentiment.negative}}</span>
         </li>
       </ul>
     {{/if}}
