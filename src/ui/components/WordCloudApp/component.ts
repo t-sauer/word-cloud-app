@@ -20,7 +20,7 @@ export interface Topic {
 export default class WordCloudApp extends Component {
 
   @tracked private topics: Topic[] = [];
-  @tracked private selectedTopic: Topic | null;
+  @tracked private selectedTopic: Topic | null = null;
   @tracked private topicInformationVisible: boolean = false;
 
   constructor(options) {
@@ -30,7 +30,7 @@ export default class WordCloudApp extends Component {
   }
 
   private async loadTopics() {
-    const request = await fetch('./topics.json');
+    const request = await fetch('/topics.json');
     const data = await request.json();
 
     this.topics = data.topics;
