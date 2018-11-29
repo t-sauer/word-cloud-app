@@ -11,7 +11,3 @@ html, body {
 body {
   min-width: 1000px;
 }
-
-@import "word-cloud-app";
-@import "word-cloud";
-@import "topic-information";

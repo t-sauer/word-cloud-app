@@ -11,7 +11,11 @@ module.exports = function(defaults) {
         resolve({ jsnext: true, module: true, main: true }),
         commonjs()
       ]
-    }
+    },
+    'css-blocks': {
+      entry: 'WordCloudApp',
+      output: 'src/ui/styles/app.css'
+    },
   });
 
   return app.toTree();

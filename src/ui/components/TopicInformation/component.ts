@@ -3,6 +3,7 @@ import { Topic } from '../WordCloudApp/component';
 
 export default class TopicInformation extends Component {
   public args: {
-    topic: Topic
+    topic: Topic,
+    topicInformationVisible: boolean
   };
 }

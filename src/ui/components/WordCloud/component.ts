@@ -47,7 +47,7 @@ export default class WordCloud extends Component {
 
     const wordList = new WordCloudList(this.args.topics);
 
-    const element = this.element.querySelector('.word-cloud__cloud');
+    const element = this.element.querySelector('[data-cloud-container]');
 
     const list = wordList.elements.map((wordElement) => {
       return [wordElement, wordElement.size * 30];
