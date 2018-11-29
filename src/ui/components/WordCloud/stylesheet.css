@@ -1,0 +1,9 @@
+:scope {
+  user-select: none;
+  z-index: 1;
+}
+
+.cloud {
+  height: 340px;
+  margin: 130px 40px;
+}
